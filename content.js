@@ -65,7 +65,7 @@ globalThis.academicContent = {
       {title: 'Personal Web Infrastructure', summary: 'Built and hosted a personal blog and web applications on my own server, connecting frontend interfaces with backend services.', bullets: [
         'Set up a Hexo blog with the Redefine theme and organized the blog, Cornell note-taking services and bot deployment under separate subdomains.',
         'Deployed web and mini-program backend endpoints for the Cornell tool, including PHP/MySQL services for accounts and notes.'
-      ], tags: ['Self-hosting', 'Hexo', 'PHP', 'MySQL', 'Web deployment'], links: []}
+      ], tags: ['Self-hosting', 'Hexo', 'PHP', 'MySQL', 'Web deployment'], links: [{label: 'Previous website: kuiba911-babeltower.top', url: 'http://kuiba911-babeltower.top/'}]}
     ],
     experience: 'Industry experience', internships: [
       {company: 'Cardinal Operations (Beijing) Co., Ltd.', role: 'Intern', date: 'Nov 2025–Jan 2026', bullets: [
@@ -175,7 +175,7 @@ globalThis.academicContent = {
       {title: '个人服务器与网站基础设施', summary: '使用个人服务器搭建博客与 Web 应用，将前端界面和后端服务连接为可运行的系统。', bullets: [
         '搭建基于 Hexo 与 Redefine 主题的博客，使用独立子域名组织个人博客、康奈尔笔记服务及机器人部署。',
         '部署康奈尔笔记工具的网页端与小程序后端接口，包括用于账号与笔记管理的 PHP/MySQL 服务。'
-      ], tags: ['服务器建站', 'Hexo', 'PHP', 'MySQL', 'Web 部署'], links: []}
+      ], tags: ['服务器建站', 'Hexo', 'PHP', 'MySQL', 'Web 部署'], links: [{label: '原个人网站：kuiba911-babeltower.top', url: 'http://kuiba911-babeltower.top/'}]}
     ],
     experience: '实习经历', internships: [
       {company: '杉数科技（北京）有限公司', role: '实习生', date: '2025.11–2026.01', bullets: [

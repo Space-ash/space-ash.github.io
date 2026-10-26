@@ -39,23 +39,23 @@ html[lang=zh-CN] h1{letter-spacing:-1.5px}html[lang=zh-CN] .intro-line{line-heig
 @media print{.cv-section{break-inside:auto}.cv-section>h2{break-after:avoid}.cv-header,.cv-section .work-entry,.education-entry,.record-list>div,.skill-list>div{break-inside:avoid}.cv-section .work-entry{padding:11px 0}.cv-section .contributions{font-size:10.5px;line-height:1.55}.cv-section .work-entry .work-description,.cv-section .work-entry .outcome{font-size:11px}.cv-section .keywords{font-size:9px}.cv-section{margin:20px 0}.cv-section h2{font-size:21px}.cv-section .record-list>div{padding:5px 0}.cv-tools,.language-switch,.sr-only{display:none!important}.cv-header h1{font-size:36px}.cv-wrap{margin:0;padding:0}.cv-section .work-entry .project-title{break-after:avoid}.cv-section .work-entry p,.cv-section .work-entry li{orphans:2;widows:2}}
 
 /* Independently styled refinement inspired by the former Hexo/Redefine site:
-   restrained burgundy accents, rounded surfaces and an education timeline. */
-:root{--paper:#f8f7f5;--ink:#303238;--green:#922b40;--muted:#62636b;--line:#dfdadb;--soft:#f2e9eb}
-a:hover{color:#6d1f30}.wordmark-dot,.section-number{color:var(--green)}
-::selection{background:#ead0d6;color:#3e1420}
-.monogram{background:#efe5e6;border-color:#e1d4d7;border-radius:16px;box-shadow:0 4px 16px rgba(50,35,40,.04)}
-.monogram:before,.monogram:after{border-color:#cdb3b9}.monogram span{color:#81374a}.monogram small{color:#7d5660}.monogram i,.tiny-rule{background:#a67480}
-.profile-name,.intro-line{color:var(--ink)}.intro>p:not(.eyebrow):not(.intro-line),.contributions,.work-entry .work-description{color:#55565e}
-.button,.site-header nav .nav-cv{border-radius:6px;border-color:#cdb7bd}.language-switch{border-color:#cdb7bd}.language-switch button:hover{box-shadow:inset 0 0 0 1px #bd99a3}
-.availability i{background:var(--green)}.interest-marker{color:#986170}.interests article{border-top-color:#bea0a8}.tag{color:#813247;border-radius:4px}.work-entry .outcome span{color:#a1717e}
-.project-list{display:grid;gap:18px}.project-list>.work-entry{margin:0;padding:23px 25px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.62);box-shadow:0 3px 14px rgba(48,33,38,.025)}
-.project-list>.work-entry:last-child{padding-bottom:23px;border-bottom:1px solid var(--line)}.project-list>.featured-work{background:#fff;border-color:#cdb7bd}
-#education .education-entry{position:relative;margin-top:0;padding:0 0 26px 23px;border-left:1px solid #d5bfc5}
+   the original green palette, rounded surfaces and an education timeline. */
+:root{--paper:#f8f7f3;--ink:#26352f;--green:#284c40;--muted:#626b65;--line:#dcded5;--soft:#e9ede6}
+a:hover{color:#152c23}.wordmark-dot,.section-number{color:var(--green)}
+::selection{background:#dce5d7;color:#26352f}
+.monogram{background:#e3e8de;border-color:#d7decf;border-radius:16px;box-shadow:0 4px 16px rgba(38,53,47,.04)}
+.monogram:before,.monogram:after{border-color:#b6c2ad}.monogram span{color:#405440}.monogram small{color:#4c604b}.monogram i,.tiny-rule{background:#7c8d70}
+.profile-name{color:var(--ink)}.intro-line{color:#46584b}.intro>p:not(.eyebrow):not(.intro-line),.contributions,.work-entry .work-description{color:#535e57}
+.button,.site-header nav .nav-cv{border-radius:6px;border-color:#acb8aa}.language-switch{border-color:#acb8aa}.language-switch button:hover{box-shadow:inset 0 0 0 1px #9eac98}
+.availability i{background:var(--green)}.interest-marker{color:#7c8c6c}.interests article{border-top-color:#a9b5a0}.tag{color:#465b48;border-radius:4px}.work-entry .outcome span{color:#718767}
+.project-list{display:grid;gap:18px}.project-list>.work-entry{margin:0;padding:23px 25px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.62);box-shadow:0 3px 14px rgba(38,53,47,.025)}
+.project-list>.work-entry:last-child{padding-bottom:23px;border-bottom:1px solid var(--line)}.project-list>.featured-work{background:#fff;border-color:#acb8aa}
+#education .education-entry{position:relative;margin-top:0;padding:0 0 26px 23px;border-left:1px solid #c4d0bc}
 #education .education-entry:before{content:'';position:absolute;left:-4px;top:8px;width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px var(--paper)}
 #education .education-entry:last-child{padding-bottom:0}
 .system-entry .eyebrow{margin-bottom:9px;font-size:9px}.system-entry h3{font-size:19px;font-weight:550;line-height:1.4}
-.system-entry .work-description{font-size:13px;line-height:1.85;color:#55565e;margin:12px 0}.system-entry+.system-entry{border-top:1px solid var(--line);padding-top:24px;margin-top:27px}.resource-links{margin-top:16px}
-.contact{border-radius:10px;background:#f0e9e9}.contact p{color:#60515a}.contact-details{border-color:#dfd0d5}
+.system-entry .work-description{font-size:13px;line-height:1.85;color:#535e57;margin:12px 0}.system-entry+.system-entry{border-top:1px solid var(--line);padding-top:24px;margin-top:27px}.resource-links{margin-top:16px}
+.contact{border-radius:10px;background:#edf0e8}.contact p{color:#55624f}.contact-details{border-color:#d4dbcd}
 .cv-section .system-entry{break-inside:avoid}.cv-section .system-entry h3{font-size:16px}.cv-section .system-entry .work-description,.cv-section .system-entry .contributions{font-size:12px}.cv-section .system-entry .eyebrow{margin-top:15px}.cv-section .system-entry+.system-entry{padding-top:13px;margin-top:17px}
 @media(max-width:760px){.monogram{border-radius:10px}.project-list{gap:14px}.project-list>.work-entry,.project-list>.work-entry:last-child{padding:19px}.system-entry h3{font-size:18px}#education .education-entry{padding-left:19px}}
 @media print{.cv-section .system-entry{padding:0;border:0}.cv-section .system-entry+.system-entry{margin-top:14px}.cv-section .system-entry .work-description,.cv-section .system-entry .contributions{font-size:10.5px;line-height:1.55}.system-entry .eyebrow{color:#333}.resource-links{margin-top:8px}.resource-links .text-link{font-size:10px}.cv-section .project-title,.cv-section .system-entry h3{color:#111}}
