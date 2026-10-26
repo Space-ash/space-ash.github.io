@@ -3,7 +3,7 @@
   const email = 'hejunchen0401@connect.hku.hk';
   const escape = value => String(value).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
   const e = escape;
-  const ids = ['about', 'research', 'education', 'experience', 'awards', 'contact'];
+  const ids = ['about', 'research', 'education', 'systems', 'experience', 'awards', 'contact'];
   const cvLink = lang => `cv.html?lang=${lang}`;
   const bullets = items => `<ul class="contributions">${items.map(item => `<li>${e(item)}</li>`).join('')}</ul>`;
   const rows = items => `<dl class="record-list">${items.map(([date, text]) => `<div><dt>${e(date)}</dt><dd>${e(text)}</dd></div>`).join('')}</dl>`;
@@ -19,6 +19,12 @@
   function skills(t) {
     return `<dl class="skill-list">${t.skillGroups.map(([label, text]) => `<div><dt>${e(label)}</dt><dd>${e(text)}</dd></div>`).join('')}</dl>`;
   }
+  function systems(t) {
+    return `<div class="system-list">${t.systemEntries.map(item => `<article class="system-entry"><p class="eyebrow">${e(t.systemsLabel)}</p><h3>${e(item.title)}</h3><p class="work-description">${e(item.summary)}</p>${bullets(item.bullets)}<ul class="keywords">${item.tags.map(tag => `<li>${e(tag)}</li>`).join('')}</ul>${item.links.length ? `<div class="resource-links">${item.links.map(link => {
+      if (!/^https?:\/\//.test(link.url)) throw new Error('Expected an HTTP resource link');
+      return `<a class="text-link" href="${e(link.url)}">${e(link.label)} <span aria-hidden="true">↗</span></a>`;
+    }).join('')}</div>` : ''}</article>`).join('')}</div>`;
+  }
   const heading = (number, title, id) => `<div class="section-heading"><span class="section-number" aria-hidden="true">${number}</span><h2 id="${id}-heading">${e(title)}</h2></div>`;
   const section = (number, title, id, content, extra = '') => `<section class="section ${extra}" id="${id}" aria-labelledby="${id}-heading">${heading(number, title, id)}${content}</section>`;
   function home(t, lang) {
@@ -28,12 +34,13 @@
       main: `<section class="intro" id="about" aria-labelledby="about-heading"><p class="eyebrow"><span class="tiny-rule" aria-hidden="true"></span>${e(t.aboutLabel)}</p><h1 id="about-heading">${e(t.name)}</h1><p class="intro-line">${e(t.headline).replace('\n', '<br>')}</p>${t.bio.map(p => `<p>${e(p)}</p>`).join('')}<div class="intro-footer"><a class="text-link" href="#work">${e(t.explore)} <span aria-hidden="true">↓</span></a><span class="availability"><i aria-hidden="true"></i>${e(t.status)}</span></div></section>`
         + section('01', t.research, 'research', `<p class="section-lede">${e(t.researchLede)}</p><div class="interests">${t.interests.map(([title, text]) => `<article><span class="interest-marker" aria-hidden="true">↗</span><h3>${e(title)}</h3><p>${e(text)}</p></article>`).join('')}</div>`)
         + section('02', t.education, 'education', education(t))
-        + section('03', t.work, 'work', `<p class="section-lede">${e(t.workLede)}</p>${projects(t, false)}`)
-        + section('04', t.experience, 'experience', internships(t))
-        + section('05', t.awards, 'awards', rows(t.awardEntries))
-        + section('06', t.skills, 'skills', skills(t))
-        + section('07', t.service, 'service', rows(t.activities))
-        + section('08', t.contact, 'contact', `<p>${e(t.contactText)}</p><a class="contact-email" href="mailto:${email}">${email} <span aria-hidden="true">↗</span></a><div class="contact-details"><p>${e(t.role)}<br>${e(t.university)} · ${e(t.location)}</p><a class="text-link" href="${cvLink(lang)}">${e(t.viewCV)} <span aria-hidden="true">↗</span></a></div>`, 'contact')
+        + section('03', t.work, 'work', `<p class="section-lede">${e(t.workLede)}</p><div class="project-list">${projects(t, false)}</div>`)
+        + section('04', t.systems, 'systems', `<p class="section-lede">${e(t.systemsLede)}</p>${systems(t)}`)
+        + section('05', t.experience, 'experience', internships(t))
+        + section('06', t.awards, 'awards', rows(t.awardEntries))
+        + section('07', t.skills, 'skills', skills(t))
+        + section('08', t.service, 'service', rows(t.activities))
+        + section('09', t.contact, 'contact', `<p>${e(t.contactText)}</p><a class="contact-email" href="mailto:${email}">${email} <span aria-hidden="true">↗</span></a><div class="contact-details"><p>${e(t.role)}<br>${e(t.university)} · ${e(t.location)}</p><a class="text-link" href="${cvLink(lang)}">${e(t.viewCV)} <span aria-hidden="true">↗</span></a></div>`, 'contact')
         + `<footer><span>© 2026 ${e(t.name)}</span><a href="#top">${e(t.footer)} ↑</a></footer>`
     };
   }
@@ -43,6 +50,7 @@
       + block(t.research, `<p>${t.interests.map(([title]) => e(title)).join(' · ')}</p>`)
       + block(t.education, education(t))
       + block(t.work, projects(t, true))
+      + block(t.systems, systems(t))
       + block(t.experience, internships(t))
       + block(t.awards, rows(t.awardEntries))
       + block(t.skills, skills(t))

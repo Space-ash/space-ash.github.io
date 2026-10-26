@@ -1,9 +1,9 @@
-/* Bilingual profile content, transcribed and condensed from CV2026.docx. */
+/* Bilingual profile: CV2026.docx, supplied server projects and the author's technical article. */
 globalThis.academicContent = {
   en: {
     name: 'Junchen He', title: 'Junchen He · Research & Academic Profile',
     description: 'Junchen He, MSc in Artificial Intelligence student at HKU. Interested in spatial intelligence, embodied interaction and deployable interactive systems, with experience in 3D reconstruction and embedded engineering.',
-    nav: ['About', 'Research', 'Education', 'Experience', 'Awards', 'Contact'],
+    nav: ['About', 'Research', 'Education', 'Systems', 'Experience', 'Awards', 'Contact'],
     skip: 'Skip to content', language: 'Language', profileLabel: 'Profile at a glance',
     discipline: 'ARTIFICIAL INTELLIGENCE', role: 'MSc in Artificial Intelligence', university: 'The University of Hong Kong', location: 'Hong Kong',
     viewCV: 'View full CV', download: 'Print / Save as PDF', back: 'Back to profile', cvTitle: 'Curriculum vitae',
@@ -55,6 +55,18 @@ globalThis.academicContent = {
         'Created a 3D sorting-turntable model and produced project demonstration videos.'
       ], outcome: 'Selected as an exemplar for the following year’s course design', tags: ['MATLAB/Simulink', 'Motor coordination', '3D modeling']}
     ],
+    systems: 'Systems & technical writing', systemsLede: 'Independent deployments that complement my research with hands-on systems experience.', systemsLabel: 'INDEPENDENT ENGINEERING',
+    systemEntries: [
+      {title: 'QQ Bot Webhook Deployment', summary: 'Deployed a Python-based QQ bot on my personal server and documented the setup in a technical article published in October 2025.', bullets: [
+        'Integrated the official QQ bot Python SDK with a FastAPI Webhook endpoint for callback validation, signature verification and message-event dispatch.',
+        'Configured HTTPS callbacks and Apache reverse proxying; ran the Uvicorn service under systemd with automatic restarts and diagnostic logs.',
+        'Adapted incoming message payloads for SDK handlers and tested private-message replies.'
+      ], tags: ['Python', 'FastAPI', 'Webhooks', 'Apache', 'systemd'], links: [{label: 'Deployment article · CSDN (Chinese)', url: 'https://blog.csdn.net/weixin_72479216/article/details/153705092'}]},
+      {title: 'Personal Web Infrastructure', summary: 'Built and hosted a personal blog and web applications on my own server, connecting frontend interfaces with backend services.', bullets: [
+        'Set up a Hexo blog with the Redefine theme and organized the blog, Cornell note-taking services and bot deployment under separate subdomains.',
+        'Deployed web and mini-program backend endpoints for the Cornell tool, including PHP/MySQL services for accounts and notes.'
+      ], tags: ['Self-hosting', 'Hexo', 'PHP', 'MySQL', 'Web deployment'], links: []}
+    ],
     experience: 'Industry experience', internships: [
       {company: 'Cardinal Operations (Beijing) Co., Ltd.', role: 'Intern', date: 'Nov 2025–Jan 2026', bullets: [
         'Cleaned, processed and validated large-scale coal-mine transportation data, resolving missing, duplicate and anomalous records.',
@@ -82,6 +94,7 @@ globalThis.academicContent = {
       ['Programming & data', 'C, Python, JavaScript, PHP, MySQL'],
       ['Modeling & engineering', 'MATLAB/Simulink, Keil, Multisim, SolidWorks'],
       ['Computing', 'WSL, OpenCV, machine learning'],
+      ['Web deployment', 'FastAPI, Uvicorn, Apache reverse proxying, systemd, Hexo'],
       ['Certificates', 'Embedded Systems Design Associate Engineer — Chinese Institute of Electronics; HCCDA-IoT'],
       ['English', 'IELTS 7.0 · Listening 6.5, Reading 8.0, Writing 6.5, Speaking 6.0']
     ],
@@ -100,7 +113,7 @@ globalThis.academicContent = {
   zh: {
     name: '何峻宸', title: '何峻宸 · 学术个人主页',
     description: '何峻宸，香港大学人工智能理学硕士在读。关注空间智能、具身交互与可部署的交互系统，具有三维重建及嵌入式工程项目经验。',
-    nav: ['关于我', '研究方向', '教育背景', '实习经历', '荣誉奖项', '联系我'],
+    nav: ['关于我', '研究方向', '教育背景', '系统实践', '实习经历', '荣誉奖项', '联系我'],
     skip: '跳转至正文', language: '语言', profileLabel: '个人信息',
     discipline: '人工智能', role: '人工智能理学硕士在读', university: '香港大学', location: '中国香港',
     viewCV: '查看完整简历', download: '打印 / 另存为 PDF', back: '返回个人主页', cvTitle: '个人简历',
@@ -152,6 +165,18 @@ globalThis.academicContent = {
         '建立分类转盘的三维模型，制作项目演示视频。'
       ], outcome: '被教师选为下一年度课程设计示范项目', tags: ['MATLAB/Simulink', '电机协同', '三维建模']}
     ],
+    systems: '系统实践与技术写作', systemsLede: '通过独立部署积累系统集成与运维经验，为研究原型的实现提供工程基础。', systemsLabel: '独立工程实践',
+    systemEntries: [
+      {title: 'QQ 机器人 Webhook 服务部署', summary: '在个人服务器部署基于 Python 的 QQ 机器人，并于 2025 年 10 月撰写技术文章记录部署过程。', bullets: [
+        '结合 QQ 机器人官方 Python SDK 与 FastAPI Webhook 接口，实现回调校验、签名验证与消息事件分发。',
+        '配置 HTTPS 回调和 Apache 反向代理，使用 systemd 管理 Uvicorn 服务，设置自动重启并通过日志排查问题。',
+        '适配接收消息的数据结构以对接 SDK 处理函数，并测试私聊消息回复。'
+      ], tags: ['Python', 'FastAPI', 'Webhooks', 'Apache', 'systemd'], links: [{label: '部署技术文章 · CSDN', url: 'https://blog.csdn.net/weixin_72479216/article/details/153705092'}]},
+      {title: '个人服务器与网站基础设施', summary: '使用个人服务器搭建博客与 Web 应用，将前端界面和后端服务连接为可运行的系统。', bullets: [
+        '搭建基于 Hexo 与 Redefine 主题的博客，使用独立子域名组织个人博客、康奈尔笔记服务及机器人部署。',
+        '部署康奈尔笔记工具的网页端与小程序后端接口，包括用于账号与笔记管理的 PHP/MySQL 服务。'
+      ], tags: ['服务器建站', 'Hexo', 'PHP', 'MySQL', 'Web 部署'], links: []}
+    ],
     experience: '实习经历', internships: [
       {company: '杉数科技（北京）有限公司', role: '实习生', date: '2025.11–2026.01', bullets: [
         '清洗、处理并验证大规模煤矿运输数据，解决缺失、重复及异常记录问题。',
@@ -179,6 +204,7 @@ globalThis.academicContent = {
       ['编程与数据', 'C、Python、JavaScript、PHP、MySQL'],
       ['建模与工程工具', 'MATLAB/Simulink、Keil、Multisim、SolidWorks'],
       ['计算工具', 'WSL、OpenCV、机器学习'],
+      ['Web 部署', 'FastAPI、Uvicorn、Apache 反向代理、systemd、Hexo'],
       ['证书', '中国电子学会嵌入式系统设计助理工程师、HCCDA-IoT'],
       ['英语', '雅思 7.0 · 听力 6.5、阅读 8.0、写作 6.5、口语 6.0']
     ],
