@@ -208,7 +208,7 @@ globalThis.academicContent = {
       ['2022.10–2023.03', '精工 2223 班宣传委员'],
       ['2022.10–2023.03', '精工书院学生会宣传部成员']
     ],
-    interesting: 'Interesting things', interestingGroups: [
+    interesting: '实况', interestingGroups: [
       {title: '经常刷新的地点', items: ['音乐图书馆', 'B-Active', '美心食堂']},
       {title: '奶茶排行榜', ranked: true, items: [
         '牛油果酸奶奶昔+碧根果 · 茉酸奶',
