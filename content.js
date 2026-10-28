@@ -8,8 +8,8 @@ globalThis.academicContent = {
     role: 'MSc in Artificial Intelligence', university: 'The University of Hong Kong', location: 'Hong Kong',
     aboutLabel: 'ABOUT ME',
     bio: [
-      'I am an MSc in Artificial Intelligence student at the University of Hong Kong, with a BEng in Automation from Beijing Institute of Technology. My undergraduate thesis on metric-scale road scene reconstruction using 3D Gaussians received the Outstanding Undergraduate Thesis award.',
-      'I am seeking PhD opportunities at the intersection of spatial intelligence and human–computer interaction. Building on my experience in 3D reconstruction, robotics, wearable hardware and full-stack development, I hope to investigate how systems can perceive their surroundings and support people through context-aware interaction. I am particularly interested in translating these foundations into embodied interfaces and reliable XR systems for everyday environments.'
+      'I am currently pursuing an MSc in Artificial Intelligence at the University of Hong Kong, having earned a Bachelor of Engineering in Automation from Beijing Institute of Technology. My undergraduate thesis focused on metric-scale road scene reconstruction using 3D Gaussian Splatting and was recognized as an Outstanding Undergraduate Thesis. During my undergraduate studies, I also led or contributed to projects in embedded systems, automatic control, and full-stack development, gaining practical experience across perception, control, and hardware–software development.',
+      'My academic journey has taken me from Vehicle Engineering to Automation, and now to postgraduate study in Artificial Intelligence. As AI advances rapidly, I am particularly interested in how intelligent systems can perceive and understand real-world environments and provide practical support in everyday life through interaction with people. I believe the value of technology lies in addressing human needs and creating smarter, more efficient, and richer everyday experiences. Building on my experience in 3D perception, automatic control, and systems development, I hope to explore human-centered intelligent systems that can operate in real-world settings.'
     ],
     explore: 'Explore my research', status: 'Open to PhD opportunities',
     education: 'Education', educationEntries: [
@@ -98,7 +98,15 @@ globalThis.academicContent = {
       ['Oct 2022–Mar 2023', 'Publicity Committee Member · Jinggong 2223'],
       ['Oct 2022–Mar 2023', 'Publicity Department Member · Jinggong College Student Union']
     ],
-    hobbies: 'Personal interests', hobbyText: 'Fitness, tennis, gaming and anime.',
+    interesting: 'Interesting things', interestingGroups: [
+      {title: 'Usual spots', items: ['HKU music library', 'B-Active', 'CYM canteen']},
+      {title: 'Milk tea ranking', ranked: true, items: [
+        'Avocado yogurt shake + pecans · MORE YOGURT',
+        'Boya Jue Xian · CHAGEE',
+        'Liu Yun Latte · Cotti Coffee'
+      ]},
+      {title: 'Listening lately', items: ['I Really Want to Stay at Your House · Cyberpunk 2077']}
+    ],
     contact: 'Get in touch', contactText: 'For PhD opportunities, research conversations and academic correspondence, please contact me by email.',
     footer: 'Back to top'
   },
@@ -110,8 +118,8 @@ globalThis.academicContent = {
     role: '人工智能理学硕士在读', university: '香港大学', location: '中国香港',
     aboutLabel: '关于我',
     bio: [
-      '我目前在香港大学攻读人工智能理学硕士，此前获得北京理工大学自动化工学学士学位。本科毕业论文围绕基于三维高斯的真实尺度道路场景重建展开，并获评优秀本科毕业论文。',
-      '我希望攻读空间智能与人机交互交叉方向的博士。基于三维重建、机器人、可穿戴硬件和全栈开发的已有经历，我希望研究系统如何感知周围环境，并通过情境感知交互支持人的活动。我尤其关注如何将这些技术基础用于具身交互界面，以及能在日常环境中可靠运行的 XR 系统。'
+      '我目前在香港大学攻读人工智能理学硕士，此前获得北京理工大学自动化工学学士学位。本科毕业论文聚焦基于三维高斯的真实尺度道路场景重建，获评优秀本科毕业论文。本科期间，我还负责或参与了嵌入式开发、自动控制与全栈开发等项目，积累了涵盖感知、控制及软硬件系统开发的实践经验。',
+      '从车辆工程转入自动化，再到研究生阶段选择人工智能，在 AI 技术飞速发展的当下，我尤为关注智能系统如何感知和理解真实环境，并通过与人的交互，为日常生活提供切实的帮助。我相信，技术的价值在于回应人的需求，创造更智能、高效且丰富的生活体验。未来，我希望结合三维感知、自动控制与系统开发的经验，探索能够在真实场景中运行、以人为中心的智能系统。'
     ],
     explore: '查看研究与项目', status: '寻求博士研究机会',
     education: '教育背景', educationEntries: [
@@ -141,7 +149,7 @@ globalThis.academicContent = {
         '实现 20 mV 判别电路与交流转直流稳压电源。',
         '通过 EDA 仿真与实物电路调试验证设计。'
       ], outcome: '小组获得全年级唯一最高分项目', tags: ['模拟电路', '信号处理', 'EDA仿真']},
-      {title: '云端互联臂环电子设备', date: '2024.06–2024.08', summary: '在全国大学生嵌入式芯片与系统设计竞赛中担任团队负责人，设计新型臂环电子设备。', bullets: [
+      {title: '云端互联智能电子臂章设备', date: '2024.06–2024.08', summary: '在全国大学生嵌入式芯片与系统设计竞赛中担任团队负责人，设计新型臂环电子设备。', bullets: [
         '独立设计 PCB，完成嵌入式软件开发与硬件适配。',
         '部署云端监控系统，开发小程序与网页界面以读取和展示设备信息。'
       ], outcome: '国家级二等奖 · 相关实用新型专利申请审查中', tags: ['PCB 设计', '嵌入式软件', '云端监控']},
@@ -149,7 +157,7 @@ globalThis.academicContent = {
         '带领团队完成 MATLAB/Simulink 建模与算法验证，并设计双电机协同控制系统。',
         '使用 SolidWorks 为分类转盘建模，并落地 3D 打印投入项目使用。',
         '主持项目答辩，录制、剪辑制作项目演示视频。'
-      ], outcome: '被教师选为下一年度课程设计示范项目', tags: ['MATLAB/Simulink', '电机协同', '3D 建模']}
+      ], outcome: '被选为下一年度课程设计示范项目', tags: ['MATLAB/Simulink', '电机协同', '3D 建模']}
     ],
     systems: '其他实践经历', systemsLede: '课余和项目之外以自身兴趣为驱动独立完成的一些实践。', systemsLabel: '独立实践',
     systemEntries: [
@@ -200,7 +208,15 @@ globalThis.academicContent = {
       ['2022.10–2023.03', '精工 2223 班宣传委员'],
       ['2022.10–2023.03', '精工书院学生会宣传部成员']
     ],
-    hobbies: '个人兴趣', hobbyText: '健身、网球、游戏、动漫',
+    interesting: 'Interesting things', interestingGroups: [
+      {title: '经常刷新的地点', items: ['音乐图书馆', 'B-Active', '美心食堂']},
+      {title: '奶茶排行榜', ranked: true, items: [
+        '牛油果酸奶奶昔+碧根果 · 茉酸奶',
+        '伯牙绝弦 · 霸王茶姬',
+        '流云拿铁 · 库迪咖啡'
+      ]},
+      {title: '最近在听', items: ['I Really Want to Stay at Your House · Cyberpunk 2077']}
+    ],
     contact: '联系我', contactText: '欢迎通过电子邮件联系我，交流博士研究机会、研究问题及学术合作。',
     footer: '返回顶部'
   }

@@ -28,6 +28,12 @@
   function systems(t, full = false) {
     return `<div class="project-list">${t.systemEntries.map(item => `<article class="work-entry"><div class="work-meta"><span class="tag">${e(t.systemsLabel)}</span></div><h3 class="project-title">${e(item.title)}</h3><p class="work-description">${e(item.summary)}</p>${contributions(t, item.bullets, full)}<ul class="keywords">${item.tags.map(tag => `<li>${e(tag)}</li>`).join('')}</ul>${resourceLinks(item.links)}</article>`).join('')}</div>`;
   }
+  function interesting(t) {
+    return `<div class="interesting-grid">${t.interestingGroups.map(group => {
+      const list = group.ranked ? 'ol' : 'ul';
+      return `<article class="interesting-card"><h3>${e(group.title)}</h3><${list}>${group.items.map(item => `<li>${e(item)}</li>`).join('')}</${list}></article>`;
+    }).join('')}</div>`;
+  }
   const heading = (number, title, id) => `<div class="section-heading"><span class="section-number" aria-hidden="true">${number}</span><h2 id="${id}-heading">${e(title)}</h2></div>`;
   const section = (number, title, id, content, extra = '') => `<section class="section ${extra}" id="${id}" aria-labelledby="${id}-heading">${heading(number, title, id)}${content}</section>`;
   function home(t, lang) {
@@ -42,7 +48,8 @@
         + section('05', t.awards, 'awards', rows(t.awardEntries))
         + section('06', t.skills, 'skills', skills(t))
         + section('07', t.service, 'service', rows(t.activities))
-        + section('08', t.contact, 'contact', `<p>${e(t.contactText)}</p><a class="contact-email" href="mailto:${email}">${email} <span aria-hidden="true">↗</span></a><div class="contact-details"><p>${e(t.role)}<br>${e(t.university)} · ${e(t.location)}</p></div>`, 'contact')
+        + section('08', t.interesting, 'interesting', interesting(t))
+        + section('09', t.contact, 'contact', `<p>${e(t.contactText)}</p><a class="contact-email" href="mailto:${email}">${email} <span aria-hidden="true">↗</span></a><div class="contact-details"><p>${e(t.role)}<br>${e(t.university)} · ${e(t.location)}</p></div>`, 'contact')
         + `<footer><span>© 2026 ${e(t.name)}</span><a href="#top">${e(t.footer)} ↑</a></footer>`
     };
   }
