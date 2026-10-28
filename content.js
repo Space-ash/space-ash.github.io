@@ -5,8 +5,8 @@ globalThis.academicContent = {
     description: 'Junchen He, MSc in Artificial Intelligence student at HKU. Interested in spatial intelligence, embodied interaction and deployable interactive systems, with experience in 3D reconstruction and embedded engineering.',
     nav: ['About', 'Education', 'Experience', 'Research', 'Independent work', 'Awards', 'Contact'],
     skip: 'Skip to content', language: 'Language', profileLabel: 'Profile at a glance',
-    discipline: 'ARTIFICIAL INTELLIGENCE', role: 'MSc in Artificial Intelligence', university: 'The University of Hong Kong', location: 'Hong Kong',
-    aboutLabel: 'ABOUT ME', headline: 'Spatial intelligence.\nHuman-centred systems.',
+    role: 'MSc in Artificial Intelligence', university: 'The University of Hong Kong', location: 'Hong Kong',
+    aboutLabel: 'ABOUT ME',
     bio: [
       'I am an MSc in Artificial Intelligence student at the University of Hong Kong, with a BEng in Automation from Beijing Institute of Technology. My undergraduate thesis on metric-scale road scene reconstruction using 3D Gaussians received the Outstanding Undergraduate Thesis award.',
       'I am seeking PhD opportunities at the intersection of spatial intelligence and human–computer interaction. Building on my experience in 3D reconstruction, robotics, wearable hardware and full-stack development, I hope to investigate how systems can perceive their surroundings and support people through context-aware interaction. I am particularly interested in translating these foundations into embodied interfaces and reliable XR systems for everyday environments.'
@@ -107,8 +107,8 @@ globalThis.academicContent = {
     description: '何峻宸，香港大学人工智能理学硕士在读。关注空间智能、具身交互与可部署的交互系统，具有三维重建及嵌入式工程项目经验。',
     nav: ['关于我', '教育背景', '实习经历', '研究与项目', '其他实践', '荣誉奖项', '联系我'],
     skip: '跳转至正文', language: '语言', profileLabel: '个人信息',
-    discipline: '人工智能', role: '人工智能理学硕士在读', university: '香港大学', location: '中国香港',
-    aboutLabel: '关于我', headline: '理解空间，\n构建以人为中心的智能系统。',
+    role: '人工智能理学硕士在读', university: '香港大学', location: '中国香港',
+    aboutLabel: '关于我',
     bio: [
       '我目前在香港大学攻读人工智能理学硕士，此前获得北京理工大学自动化工学学士学位。本科毕业论文围绕基于三维高斯的真实尺度道路场景重建展开，并获评优秀本科毕业论文。',
       '我希望攻读空间智能与人机交互交叉方向的博士。基于三维重建、机器人、可穿戴硬件和全栈开发的已有经历，我希望研究系统如何感知周围环境，并通过情境感知交互支持人的活动。我尤其关注如何将这些技术基础用于具身交互界面，以及能在日常环境中可靠运行的 XR 系统。'
