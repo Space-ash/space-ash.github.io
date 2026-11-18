@@ -7,11 +7,12 @@
   const bullets = items => `<ul class="contributions">${items.map(item => `<li>${e(item)}</li>`).join('')}</ul>`;
   const rows = items => `<dl class="record-list">${items.map(([date, text]) => `<div><dt>${e(date)}</dt><dd>${e(text)}</dd></div>`).join('')}</dl>`;
   const contributions = (t, items, full, open = false) => full ? bullets(items) : `<details${open ? ' open' : ''}><summary>${e(t.contribution)}</summary>${bullets(items)}</details>`;
+  function externalLink(link) {
+    if (!/^https?:\/\//.test(link.url)) throw new Error('Expected an HTTP resource link');
+    return `<a class="text-link" href="${e(link.url)}" target="_blank" rel="noopener noreferrer">${e(link.label)} <span aria-hidden="true">↗</span></a>`;
+  }
   function resourceLinks(links = []) {
-    return links.length ? `<div class="resource-links">${links.map(link => {
-      if (!/^https?:\/\//.test(link.url)) throw new Error('Expected an HTTP resource link');
-      return `<a class="text-link" href="${e(link.url)}" target="_blank" rel="noopener noreferrer">${e(link.label)} <span aria-hidden="true">↗</span></a>`;
-    }).join('')}</div>` : '';
+    return links.length ? `<div class="resource-links">${links.map(externalLink).join('')}</div>` : '';
   }
   function education(t) {
     return t.educationEntries.map(item => `<article class="education-entry"><p class="date">${e(item.date)}</p><div><h3>${e(item.degree)}</h3><p class="institution">${e(item.school)}</p><p class="muted">${e(item.detail)}</p></div></article>`).join('');
@@ -31,7 +32,8 @@
   function interesting(t) {
     return `<div class="interesting-grid">${t.interestingGroups.map(group => {
       const list = group.ranked ? 'ol' : 'ul';
-      return `<article class="interesting-card"><h3>${e(group.title)}</h3><${list}>${group.items.map(item => `<li>${e(item)}</li>`).join('')}</${list}></article>`;
+      const items = group.items.map(item => `<li>${typeof item === 'string' ? e(item) : externalLink(item)}</li>`).join('');
+      return `<article class="interesting-card"><h3>${e(group.title)}</h3><${list}>${items}</${list}></article>`;
     }).join('')}</div>`;
   }
   const heading = (number, title, id) => `<div class="section-heading"><span class="section-number" aria-hidden="true">${number}</span><h2 id="${id}-heading">${e(title)}</h2></div>`;

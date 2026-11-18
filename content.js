@@ -1,4 +1,9 @@
 /* Bilingual academic profile. */
+const listeningTracks = [
+  {label: 'I Really Want to Stay at Your House · Cyberpunk 2077', url: 'https://open.spotify.com/track/7mykoq6R3BArsSpNDjFQTm?si=a14713109c204878'},
+  {label: 'FIRESTARTER · K/DA', url: 'https://open.spotify.com/track/6UeSC8jEhf9XmUL8EX2rni?si=907ef39254104ff2'}
+];
+
 globalThis.academicContent = {
   en: {
     name: 'Junchen He', title: 'Junchen He · Research & Academic Profile',
@@ -105,7 +110,7 @@ globalThis.academicContent = {
         'Boya Jue Xian · CHAGEE',
         'Liu Yun Latte · Cotti Coffee'
       ]},
-      {title: 'Listening lately', items: ['I Really Want to Stay at Your House · Cyberpunk 2077']}
+      {title: 'Listening lately', items: listeningTracks}
     ],
     contact: 'Get in touch', contactText: 'For PhD opportunities, research conversations and academic correspondence, please contact me by email.',
     footer: 'Back to top'
@@ -215,7 +220,7 @@ globalThis.academicContent = {
         '伯牙绝弦 · 霸王茶姬',
         '流云拿铁 · 库迪咖啡'
       ]},
-      {title: '最近在听', items: ['I Really Want to Stay at Your House · Cyberpunk 2077']}
+      {title: '最近在听', items: listeningTracks}
     ],
     contact: '联系我', contactText: '欢迎通过电子邮件联系我，交流博士研究机会、研究问题及学术合作。',
     footer: '返回顶部'
